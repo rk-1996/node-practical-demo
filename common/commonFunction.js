@@ -1,6 +1,7 @@
 var User = require('../models/sequelizeModule').tbl_user
 var Organization = require('../models/sequelizeModule').tbl_organization
 const Sequelize = require('sequelize')
+const bcrypt = require('bcrypt');
 const Op = Sequelize.Op;
 const getTotalCountUser = async() => {
 	return await User.count({
